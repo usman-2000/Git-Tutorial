@@ -1,0 +1,187 @@
+Terms:
+
+directory > Folder
+command line or terminal > Interface for text documents
+CLI >command line interface
+cd > change directory
+repository > your project, or the folder/place where your project is
+Github > A website where you host your projects
+
+
+Github Commands:
+
+
+clone -> bring a repository that is hosted somewhere like github into a folder on your local machine.
+add -> track your files and changes on git
+commit > save your files on git.
+push -> upload git commits to a remote repo like github.
+pull -> Download changes from remote repo to your local machine, the opposite of push
+
+
+pwd -> present working directory
+ls -> list files
+cd -> change directory
+
+git log -> log of all commits which you done.
+
+
+
+for linux
+
+git --version
+
+//tells us that git is installed or not
+
+
+------------- THREE STAGE ARCGITECTURE --------------------
+
+WORKING DIRECTORY : local storage directory , which is opening in your computer
+
+
+STAGING AREA : When you change the specific files and want to only commit those files then you put those files in staging area.
+
+
+GIT DIRECTORY( Repository) : The repository on github.
+
+When we want to commit only a specific file , we use the command as :
+
+	git add first.jsx
+
+-------------------- DELETING A GIT REPOSITORY ---------------------
+
+just write the command on git bash:
+
+	rm -rf .git
+
+
+-------------------- CLONNING A GIT REPOSITORY ---------------------
+
+	git clone <link which you want to clone >
+
+if you want to give another name to the folder
+
+	git clone <url > tensorFlow
+
+-------------------- Git Diff: Showing Changes Between Commits/Staging Area & Working Directory ----------------------------------------
+
+	git diff
+
+It will compare the working directory with staging area.
+
+	git diff --staged
+
+It will compare the working directory with previous commits.
+
+--------------------- Git: Skipping The Staging Area --------------------------------------------
+
+	git commit -a -m "direct commit"
+
+In this , the git will direct commit the modified file. But there is an issue, that if there are some files which are not tracked then it will not commit those files.
+
+
+------------------- For Removing and Renaming -------------------------------------
+Removing:
+	git rm <file name>
+Renaming:
+	git mv <file name > <renamed file name >
+Untracking a File:
+	git rm --cached <file name >
+
+------------------- Git Log: Viewing & Changing Commits In Git ----------------------------------
+
+	git log -p
+It will log the commits as well as showing that what files were changed which code deleted which changed which edited.
+
+	git log --stat
+summary btaye ga
+
+	git log --since=2.days
+Last 2 days k commits dikha dy ga
+
+	git commit --m
+change the commits which already commited.
+
+------------------- Unstaging & Unmodifying Files In Git -------------------------------------
+
+use the command to unstage:
+
+	git restore --staged <file name >
+
+use this command to unmodified a file:
+	
+	git checkout --<file name>
+
+If you want to go back to the last commit or unmodified more than one file at the same time
+	
+	git checkout -f
+
+--------------------- GitHub: Working with Remote Repositories ------------------------------
+
+	git remote 
+This will talk about the repository which are on the internet(github).
+
+	git remote add origin ...........
+
+--------------------- Git: Creating & Switching Branches In Git -----------------------------
+
+To discard changes in working directory
+
+	git restore <filename>
+
+FOR CREATING A NEW BRANCH AND SWITCH YOU TO THAT BRANCH
+	git checkout -b develop
+
+phr is branch mn same wese kam kr skty hain jese master branch mn krty
+
+Wapis sy purani directory or master branch mn anay k liye yeh command use krty hain
+
+	git checkout master
+
+Or phr sy develop mn switch krny k liye
+
+	git checkout develop
+
+----
+	git branch
+
+It will show all the branches
+
+------------------------- Branching & Merging a Production Grade Project ----------------------------
+
+For Merging , go to the master branch and write the command as :
+	git merge <branch name which you want to merge to master>
+	git merge tryCleanup
+
+It maybe will show some conflicts, so resolve the conflicts and the write the commands :
+
+	git status ----> for checking the tracks and merged files
+	git add .
+	git commit -m"message" or
+	git commit --> and then    :wq
+	
+
+----------------------- Resolving Merge Conflicts -------------------------------------
+
+git branch      	shows the branches
+git branch -v 	shows branches with commits
+git branch --merged 		already merged branches
+git branch --no-merged 		branches that not merged
+
+git branch -d develop		deleting a branch , gives error if develop is not merged
+
+
+---------------------- Pushing Git Branches To Remote Repositories  -------------------------
+
+git remote 
+git remote -v 		will show if remote repository created
+
+THEN CREATE A REPOSITORY AND PUSH THE CODE TO THE REPOSITORY ON GITHUB
+git push origin <url>
+git push origin master
+
+NOW YOU CANNOT SEE THE BRANCHES ON GITHUB WHICH YOU CREATED ON BASH, FOR THIS YOU WILL USE:
+
+git push origin <branch name>
+git push origin <branchname>:<newname> 			it will create the new name of the branch and push it to the repository as a new branch
+git push -d origin <branchname> 				will delete the branch from remote repository
+

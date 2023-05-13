@@ -1,0 +1,22 @@
+Learning git
+
+1) Install git using git-scm.com
+2)github.com (making profile)
+3)making repo in github.com
+4)git init(for making local folder into repo)
+5)git status (for checking status)
+6)git add --a (for making files trackable) ###### agr koi modification ki ho to phr sy yeh command run krni hai
+7)git config --global user.email "usmanrahim2000@gmail.com"
+8)git config --global user.name "usmanrahim"
+9)git commit -m "Jo kaam aap ne kiya hai project pr"
+10)git remote add origin https://github.com/usman-2000/learninggit.git
+11)git push -u origin master
+
+
+
+####### For Hosting website via github#######
+
+
+--just click on the website
+--alter branch name as "gh-pages"
+--now your website hosted

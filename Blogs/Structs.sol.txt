@@ -1,0 +1,2 @@
+Struct is basically our own desired type of data type.
+It can store multiple type of data types in a single box. It is also like a class variable in which we define the attributes name and after that when we create an object we give attributes a values.
